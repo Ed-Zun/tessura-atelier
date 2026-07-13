@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tessura Atelier — handwoven luxury blankets and bespoke textile commissions from The Hague. Crafted on a 32-shaft loom with alpaca, yak, cashmere, and silk.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.tessuraatelier.com/">
+<meta property="og:title" content="Tessura Atelier — Woven with Intention">
+<meta property="og:description" content="Handwoven luxury blankets and bespoke textile commissions from The Hague. Crafted on a 32-shaft loom with alpaca, yak, cashmere, and silk.">
+<meta property="og:url" content="https://www.tessuraatelier.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tessura Atelier">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tessura Atelier — Woven with Intention">
+<meta name="twitter:description" content="Handwoven luxury blankets and bespoke textile commissions from The Hague.">
+<title>Tessura Atelier — Woven with Intention</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --indigo: #191729;
+    --olive: #6e6331;
+    --terracotta: #bb521f;
+    --amber: #a27021;
+    --pastel: #c1a37e;
+    --ivory: #f5efe6;
+    --ivory-dark: #e8ddd0;
+    --cream: #faf6f1;
+    --text-on-dark: #e8ddd0;
+    --text-muted-dark: rgba(232,221,208,0.6);
+    --text-muted-light: rgba(25,23,41,0.5);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    background: var(--cream);
+    color: var(--indigo);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 4vw;
+    transition: background 0.4s, backdrop-filter 0.4s;
+  }
+  nav.scrolled {
+    background: rgba(25,23,41,0.92);
+    backdrop-filter: blur(12px);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+  }
+  .nav-wordmark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--ivory);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .nav-subtitle {
+    font-size: 0.625rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted-dark);
+    margin-top: 1px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted-dark);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ivory); }
+
+  .nav-cta {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    border: 0.5px solid rgba(232,221,208,0.4);
+    padding: 0.6rem 1.4rem;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .nav-cta:hover {
+    background: rgba(232,221,208,0.1);
+    border-color: rgba(232,221,208,0.8);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--indigo);
+    background-image: url('images/hero-loom-background.jpeg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 6rem 4vw 4rem;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(25, 23, 41, 0.88);
+    z-index: 1;
+  }
+
+
+
+  .hero-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 2rem;
+  }
+
+  .hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.08;
+    color: var(--ivory);
+    margin-bottom: 1.75rem;
+  }
+  .hero-headline em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .hero-body {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted-dark);
+    max-width: 480px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .btn-primary {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--indigo);
+    background: var(--ivory);
+    padding: 1rem 2.25rem;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--ivory-dark); }
+
+  .btn-ghost {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted-dark);
+    text-decoration: none;
+    border-bottom: 0.5px solid rgba(232,221,208,0.3);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-ghost:hover { color: var(--ivory); border-color: rgba(232,221,208,0.7); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted-dark);
+    font-size: 0.625rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .scroll-line {
+    width: 0.5px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(232,221,208,0.5), transparent);
+    animation: scrollpulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollpulse {
+    0%, 100% { opacity: 0.4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.1); }
+  }
+
+  /* ── SECTION SHARED ── */
+  section { padding: 7rem 4vw; }
+
+  .section-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--olive);
+    margin-bottom: 1.25rem;
+  }
+
+  .section-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--indigo);
+    margin-bottom: 1.5rem;
+  }
+  .section-heading em { font-style: italic; color: var(--terracotta); }
+
+  /* ── PHILOSOPHY ── */
+  .philosophy {
+    background: var(--indigo);
+    color: var(--ivory);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4vw;
+    align-items: center;
+    padding: 0;
+  }
+
+  .philosophy-image {
+    height: 100%;
+    min-height: 580px;
+    overflow: hidden;
+  }
+
+  .philosophy > div:not(.philosophy-image) {
+    padding: 5rem 0;
+  }
+
+  .philosophy > div:last-child {
+    padding-right: 4vw;
+  }
+
+  .philosophy-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    font-weight: 300;
+    line-height: 1.35;
+    color: var(--ivory);
+    border-left: 1.5px solid var(--terracotta);
+    padding-left: 2rem;
+  }
+  .philosophy-quote em { font-style: italic; color: var(--amber); }
+
+  .philosophy-body {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--text-muted-dark);
+  }
+  .philosophy-body p + p { margin-top: 1.25rem; }
+
+  .philosophy-values {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .philosophy-value {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted-dark);
+  }
+  .value-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    flex-shrink: 0;
+  }
+
+  /* ── COLLECTION ── */
+  .collection { background: var(--cream); }
+
+  .collection-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vw;
+    align-items: end;
+    margin-bottom: 4rem;
+  }
+
+  .collection-description {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--text-muted-light);
+    max-width: 420px;
+  }
+
+  .collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    background: var(--ivory);
+    overflow: hidden;
+    transition: transform 0.4s;
+  }
+  .product-card:hover { transform: translateY(-4px); }
+
+  .product-swatch {
+    aspect-ratio: 4/5;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swatch-pattern {
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-info {
+    padding: 1.25rem 1.25rem 1.5rem;
+  }
+
+  .product-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--indigo);
+    margin-bottom: 0.3rem;
+  }
+  .product-material {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--pastel);
+    margin-bottom: 1rem;
+  }
+  .product-price {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--olive);
+  }
+
+  .collection-note {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted-light);
+  }
+  .collection-note a {
+    color: var(--terracotta);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--terracotta);
+    padding-bottom: 1px;
+  }
+
+  /* ── COMMISSIONS SHOWCASE ── */
+  .cs-section {
+    background: var(--ivory);
+    padding: 7rem 4vw;
+  }
+
+  .cs-intro {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 5rem;
+  }
+
+  .cs-intro-body {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--text-muted-light);
+    margin-top: 1rem;
+  }
+
+  .cs-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6vw;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .cs-story--flip .cs-images { order: 2; }
+  .cs-story--flip .cs-text   { order: 1; }
+
+  /* ── Overlapping image layout ── */
+  .cs-images {
+    position: relative;
+    height: 560px;
+    padding-bottom: 1.5rem;
+  }
+
+  .cs-img {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cs-img img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Back image: large, top-left — label sits below, fully visible */
+  .cs-img--back {
+    top: 0;
+    left: 0;
+    width: 70%;
+    z-index: 1;
+  }
+  .cs-img--back img { aspect-ratio: 3/4; }
+  .cs-img--back .cs-label { margin-top: 0.4rem; display: block; padding-left: 0.75rem; }
+
+  /* Front image: smaller, bottom-right — label below, clear of back image */
+  .cs-img--front {
+    bottom: 2rem;
+    right: 0;
+    width: 50%;
+    z-index: 2;
+    box-shadow: -8px 8px 32px rgba(25,23,41,0.16);
+    overflow: visible;
+  }
+  .cs-img--front img { aspect-ratio: 4/5; }
+
+  /* Ensure labels are always above sibling images */
+  .cs-label { position: relative; z-index: 4; }
+
+  /* Overlay label: sits at bottom-right corner of the front image */
+  .cs-img--front .cs-label--overlay {
+    position: absolute;
+    bottom: -1.4rem;
+    right: 0;
+    left: auto;
+    text-align: right;
+  }
+
+  /* Engagement: blanket fills back, couple photo corner inset */
+  .cs-images--engagement .cs-img--back {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: none;
+  }
+  .cs-images--engagement .cs-img--back img {
+    aspect-ratio: unset;
+    height: 480px;
+    object-fit: cover;
+  }
+
+  .cs-images--engagement .cs-img--corner {
+    top: auto;
+    right: auto;
+    bottom: 2.5rem;
+    left: 1.25rem;
+    width: 44%;
+    z-index: 3;
+  }
+  .cs-images--engagement .cs-img--corner img {
+    aspect-ratio: unset;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #f5efe6;
+    box-shadow: -4px 4px 20px rgba(25,23,41,0.25);
+    border: 3px solid white;
+  }
+  /* Engagement back label: tight under the image, left-aligned */
+  .cs-images--engagement .cs-img--back .cs-label {
+    position: relative;
+    margin-top: 0.35rem;
+    text-align: left;
+    display: block;
+  }
+  /* Engagement corner label: sits below the inset image */
+  .cs-images--engagement .cs-img--corner .cs-label {
+    margin-top: 0.4rem;
+    color: var(--pastel);
+  }
+
+  .cs-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--pastel);
+  }
+
+  .cs-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+  }
+
+  .cs-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--indigo);
+    margin-bottom: 1.25rem;
+  }
+
+  .cs-body {
+    font-size: 0.9rem;
+    line-height: 1.9;
+    color: var(--text-muted-light);
+  }
+
+  .cs-divider {
+    height: 0.5px;
+    background: var(--ivory-dark);
+    margin: 4.5rem 0;
+  }
+
+  /* Iris: nudge Her room label right */
+  .cs-images--iris .cs-img--back .cs-label {
+    padding-left: 1.5rem;
+  }
+
+  .cs-cta {
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .cs-cta-text {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--text-muted-light);
+    margin-bottom: 1.75rem;
+  }
+
+  @media (max-width: 900px) {
+    .cs-story { grid-template-columns: 1fr; gap: 2.5rem; }
+    .cs-story--flip .cs-images { order: 0; }
+    .cs-story--flip .cs-text   { order: 0; }
+    .cs-images { height: 360px; }
+    .cs-img--back  { width: 68%; }
+    .cs-img--front { width: 50%; }
+    .cs-images--engagement .cs-img--back img { height: 360px; }
+    .cs-images--engagement .cs-img--corner { width: 48%; }
+  }
+
+  @media (max-width: 600px) {
+    .cs-images { height: 280px; }
+    .cs-images--engagement .cs-img--back img { height: 280px; }
+  }
+
+  /* ── CRAFT ── */
+  .craft {
+    background: var(--ivory);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6vw;
+    align-items: center;
+  }
+
+  .craft-loom-visual {
+    aspect-ratio: 1;
+    background: var(--indigo);
+    background-image: url('images/hero-loom-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .craft-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .craft-step {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1.25rem;
+    align-items: start;
+  }
+  .step-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--ivory-dark);
+    line-height: 1;
+    text-align: right;
+    padding-top: 2px;
+  }
+  .step-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--pastel);
+    margin-bottom: 0.3rem;
+  }
+  .step-text {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--text-muted-light);
+  }
+
+  /* ── COMMISSION ── */
+  .commission {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6vw;
+    align-items: start;
+  }
+
+  .commission-form-wrap {
+    background: var(--ivory);
+    padding: 2.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  .form-label {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--pastel);
+    margin-bottom: 0.5rem;
+  }
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid rgba(25,23,41,0.25);
+    padding: 0.6rem 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--indigo);
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    border-bottom-color: var(--terracotta);
+  }
+  .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236e6331' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    padding-right: 1.5rem;
+    cursor: pointer;
+  }
+  .form-textarea { resize: vertical; min-height: 100px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--indigo);
+    color: var(--ivory);
+    border: none;
+    padding: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+  }
+  .btn-submit:hover { background: #2a2540; }
+
+  .commission-context {
+    padding-top: 1rem;
+  }
+  .commission-context .section-heading { margin-bottom: 1rem; }
+  .commission-context p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--text-muted-light);
+    margin-bottom: 1.25rem;
+  }
+
+  .commission-details {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .detail-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-muted-light);
+  }
+  .detail-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--pastel);
+    white-space: nowrap;
+    padding-top: 1px;
+    min-width: 80px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--indigo);
+    padding: 4rem 4vw 2.5rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 0.5px solid rgba(232,221,208,0.12);
+    margin-bottom: 2rem;
+  }
+
+  .footer-brand .nav-wordmark { display: block; margin-bottom: 0.25rem; }
+  .footer-brand .nav-subtitle { display: block; margin-bottom: 1.25rem; }
+  .footer-brand p {
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: var(--text-muted-dark);
+    max-width: 260px;
+  }
+
+  .footer-col-title {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 1.25rem;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.6rem; }
+  .footer-col a {
+    font-size: 0.8rem;
+    color: var(--text-muted-dark);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--ivory); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+    color: rgba(232,221,208,0.3);
+    letter-spacing: 0.08em;
+  }
+  .footer-bottom a {
+    color: rgba(232,221,208,0.3);
+    text-decoration: none;
+  }
+  .footer-bottom a:hover { color: rgba(232,221,208,0.7); }
+
+  /* ── DIVIDER ── */
+  .thread-divider {
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--olive), var(--terracotta), var(--amber), transparent);
+    opacity: 0.4;
+  }
+
+  /* ── FADE-IN ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── HAMBURGER / MOBILE ── */
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 1px;
+    background: var(--ivory);
+    transition: transform 0.3s;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      inset: 0;
+      background: var(--indigo);
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      z-index: 99;
+    }
+    .nav-links.open a { font-size: 1.1rem; }
+    .nav-toggle { display: flex; z-index: 101; }
+    .nav-cta { display: none; }
+
+    .philosophy,
+    .craft,
+    .commission {
+      grid-template-columns: 1fr;
+    }
+    .philosophy-image { min-height: 300px; }
+
+    .collection-intro { grid-template-columns: 1fr; }
+    .collection-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+
+    .craft-loom-visual { aspect-ratio: 4/3; }
+  }
+
+  @media (max-width: 600px) {
+    section { padding: 5rem 5vw; }
+    .collection-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+    .hero-headline { font-size: 2.5rem; }
+    .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-grid-mark { animation: none; }
+    .scroll-line { animation: none; }
+    .fade-up { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* ── COMMISSIONS SHOWCASE ── */
+  .cs-section {
+    background: var(--ivory);
+    padding: 7rem 4vw;
+  }
+
+  .cs-intro {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 5rem;
+  }
+
+  .cs-intro-body {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--text-muted-light);
+    margin-top: 1rem;
+  }
+
+  .cs-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6vw;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .cs-story--flip .cs-images { order: 2; }
+  .cs-story--flip .cs-text   { order: 1; }
+
+  /* ── Overlapping image layout ── */
+  .cs-images {
+    position: relative;
+    height: 560px;
+    padding-bottom: 1.5rem;
+  }
+
+  .cs-img {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cs-img img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Back image: large, top-left — label sits below, fully visible */
+  .cs-img--back {
+    top: 0;
+    left: 0;
+    width: 70%;
+    z-index: 1;
+  }
+  .cs-img--back img { aspect-ratio: 3/4; }
+  .cs-img--back .cs-label { margin-top: 0.4rem; display: block; padding-left: 0.75rem; }
+
+  /* Front image: smaller, bottom-right — label below, clear of back image */
+  .cs-img--front {
+    bottom: 2rem;
+    right: 0;
+    width: 50%;
+    z-index: 2;
+    box-shadow: -8px 8px 32px rgba(25,23,41,0.16);
+    overflow: visible;
+  }
+  .cs-img--front img { aspect-ratio: 4/5; }
+
+  /* Ensure labels are always above sibling images */
+  .cs-label { position: relative; z-index: 4; }
+
+  /* Overlay label: sits at bottom-right corner of the front image */
+  .cs-img--front .cs-label--overlay {
+    position: absolute;
+    bottom: -1.4rem;
+    right: 0;
+    left: auto;
+    text-align: right;
+  }
+
+  /* Engagement: blanket fills back, couple photo corner inset */
+  .cs-images--engagement .cs-img--back {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: none;
+  }
+  .cs-images--engagement .cs-img--back img {
+    aspect-ratio: unset;
+    height: 480px;
+    object-fit: cover;
+  }
+
+  .cs-images--engagement .cs-img--corner {
+    top: auto;
+    right: auto;
+    bottom: 2.5rem;
+    left: 1.25rem;
+    width: 44%;
+    z-index: 3;
+  }
+  .cs-images--engagement .cs-img--corner img {
+    aspect-ratio: unset;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #f5efe6;
+    box-shadow: -4px 4px 20px rgba(25,23,41,0.25);
+    border: 3px solid white;
+  }
+  /* Engagement back label: tight under the image, left-aligned */
+  .cs-images--engagement .cs-img--back .cs-label {
+    position: relative;
+    margin-top: 0.35rem;
+    text-align: left;
+    display: block;
+  }
+  /* Engagement corner label: sits below the inset image */
+  .cs-images--engagement .cs-img--corner .cs-label {
+    margin-top: 0.4rem;
+    color: var(--pastel);
+  }
+
+  .cs-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--pastel);
+  }
+
+  .cs-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+  }
+
+  .cs-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--indigo);
+    margin-bottom: 1.25rem;
+  }
+
+  .cs-body {
+    font-size: 0.9rem;
+    line-height: 1.9;
+    color: var(--text-muted-light);
+  }
+
+  .cs-divider {
+    height: 0.5px;
+    background: var(--ivory-dark);
+    margin: 4.5rem 0;
+  }
+
+  /* Iris: nudge Her room label right */
+  .cs-images--iris .cs-img--back .cs-label {
+    padding-left: 1.5rem;
+  }
+
+  .cs-cta {
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .cs-cta-text {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--text-muted-light);
+    margin-bottom: 1.75rem;
+  }
+
+  @media (max-width: 900px) {
+    .cs-story { grid-template-columns: 1fr; gap: 2.5rem; }
+    .cs-story--flip .cs-images { order: 0; }
+    .cs-story--flip .cs-text   { order: 0; }
+    .cs-images { height: 360px; }
+    .cs-img--back  { width: 68%; }
+    .cs-img--front { width: 50%; }
+    .cs-images--engagement .cs-img--back img { height: 360px; }
+    .cs-images--engagement .cs-img--corner { width: 48%; }
+  }
+
+  @media (max-width: 600px) {
+    .cs-images { height: 280px; }
+    .cs-images--engagement .cs-img--back img { height: 280px; }
+  }
+
+  /* ── CRAFT ── */
+  .craft {
+    background: var(--ivory);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6vw;
+    align-items: center;
+  }
+
+  .craft-loom-visual {
+    aspect-ratio: 1;
+    background: var(--indigo);
+    background-image: url('images/hero-loom-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .craft-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .craft-step {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1.25rem;
+    align-items: start;
+  }
+  .step-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--ivory-dark);
+    line-height: 1;
+    text-align: right;
+    padding-top: 2px;
+  }
+  .step-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--pastel);
+    margin-bottom: 0.3rem;
+  }
+  .step-text {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--text-muted-light);
+  }
+
+  /* ── COMMISSION ── */
+  .commission {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6vw;
+    align-items: start;
+  }
+
+  .commission-form-wrap {
+    background: var(--ivory);
+    padding: 2.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  .form-label {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--pastel);
+    margin-bottom: 0.5rem;
+  }
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid rgba(25,23,41,0.25);
+    padding: 0.6rem 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--indigo);
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    border-bottom-color: var(--terracotta);
+  }
+  .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236e6331' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    padding-right: 1.5rem;
+    cursor: pointer;
+  }
+  .form-textarea { resize: vertical; min-height: 100px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--indigo);
+    color: var(--ivory);
+    border: none;
+    padding: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+  }
+  .btn-submit:hover { background: #2a2540; }
+
+  .commission-context {
+    padding-top: 1rem;
+  }
+  .commission-context .section-heading { margin-bottom: 1rem; }
+  .commission-context p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--text-muted-light);
+    margin-bottom: 1.25rem;
+  }
+
+  .commission-details {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .detail-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-muted-light);
+  }
+  .detail-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--pastel);
+    white-space: nowrap;
+    padding-top: 1px;
+    min-width: 80px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--indigo);
+    padding: 4rem 4vw 2.5rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 0.5px solid rgba(232,221,208,0.12);
+    margin-bottom: 2rem;
+  }
+
+  .footer-brand .nav-wordmark { display: block; margin-bottom: 0.25rem; }
+  .footer-brand .nav-subtitle { display: block; margin-bottom: 1.25rem; }
+  .footer-brand p {
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: var(--text-muted-dark);
+    max-width: 260px;
+  }
+
+  .footer-col-title {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 1.25rem;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.6rem; }
+  .footer-col a {
+    font-size: 0.8rem;
+    color: var(--text-muted-dark);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--ivory); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+    color: rgba(232,221,208,0.3);
+    letter-spacing: 0.08em;
+  }
+  .footer-bottom a {
+    color: rgba(232,221,208,0.3);
+    text-decoration: none;
+  }
+  .footer-bottom a:hover { color: rgba(232,221,208,0.7); }
+
+  /* ── DIVIDER ── */
+  .thread-divider {
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--olive), var(--terracotta), var(--amber), transparent);
+    opacity: 0.4;
+  }
+
+  /* ── FADE-IN ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── HAMBURGER / MOBILE ── */
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 1px;
+    background: var(--ivory);
+    transition: transform 0.3s;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      inset: 0;
+      background: var(--indigo);
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      z-index: 99;
+    }
+    .nav-links.open a { font-size: 1.1rem; }
+    .nav-toggle { display: flex; z-index: 101; }
+    .nav-cta { display: none; }
+
+    .philosophy,
+    .craft,
+    .commission {
+      grid-template-columns: 1fr;
+    }
+    .philosophy-image { min-height: 300px; }
+
+    .collection-intro { grid-template-columns: 1fr; }
+    .collection-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+
+    .craft-loom-visual { aspect-ratio: 4/3; }
+  }
+
+  @media (max-width: 600px) {
+    section { padding: 5rem 5vw; }
+    .collection-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+    .hero-headline { font-size: 2.5rem; }
+    .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-grid-mark { animation: none; }
+    .scroll-line { animation: none; }
+    .fade-up { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* ── COMMISSIONS SHOWCASE ── */
+  .commissions-showcase {
+    background: var(--ivory);
+    padding: 7rem 4vw;
+  }
+
+  .commission-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .commission-story--reverse .story-images { order: 2; }
+  .commission-story--reverse .story-text { order: 1; }
+
+  .story-images {
+    position: relative;
+    height: 480px;
+  }
+
+  .story-inspiration,
+  .story-blanket {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+  }
+
+  /* Inspiration image: larger, behind, anchored bottom-left */
+  .story-inspiration {
+    bottom: 0;
+    left: 0;
+    width: 72%;
+    z-index: 1;
+  }
+
+  /* Blanket image: smaller, on top, anchored top-right */
+  .story-blanket {
+    top: 0;
+    right: 0;
+    width: 58%;
+    z-index: 2;
+    box-shadow: -6px 6px 28px rgba(25,23,41,0.18);
+  }
+
+  .story-inspiration img,
+  .story-blanket img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .story-inspiration img { aspect-ratio: 4/5; }
+  .story-blanket img { aspect-ratio: 3/4; }
+
+  /* Engagement story: couple photo as corner overlay on blanket */
+  .commission-story--engagement .story-images {
+    height: 480px;
+  }
+
+  .commission-story--engagement .story-blanket {
+    top: 0;
+    left: 0;
+    right: auto;
+    width: 100%;
+    z-index: 1;
+    box-shadow: none;
+  }
+
+  .commission-story--engagement .story-blanket img {
+    aspect-ratio: 4/5;
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+  }
+
+  .commission-story--engagement .story-inspiration {
+    bottom: 1.25rem;
+    left: 1.25rem;
+    right: auto;
+    width: 42%;
+    z-index: 3;
+    box-shadow: -4px 4px 20px rgba(25,23,41,0.28);
+    border: 3px solid white;
+  }
+
+  .commission-story--engagement .story-inspiration img {
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    background: #f5efe6;
+  }
+
+  .commission-story--engagement .story-inspiration .story-img-label {
+    display: inline-block;
+    margin-top: 0.4rem;
+    background: rgba(245,239,230,0.92);
+    padding: 0.2rem 0.5rem;
+    color: var(--olive);
+    position: relative;
+    z-index: 4;
+  }
+
+  /* Reversed stories: flip the overlap positions */
+  .commission-story--reverse .story-inspiration {
+    bottom: 0;
+    left: auto;
+    right: 0;
+  }
+  .commission-story--reverse .story-blanket {
+    top: 0;
+    right: auto;
+    left: 0;
+  }
+
+  .story-img-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--pastel);
+  }
+
+  .story-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+  }
+
+  .story-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--indigo);
+    margin-bottom: 1.25rem;
+  }
+
+  .story-body {
+    font-size: 0.9rem;
+    line-height: 1.9;
+    color: var(--text-muted-light);
+  }
+
+  .story-divider {
+    height: 0.5px;
+    background: var(--ivory-dark);
+    margin: 4rem 0;
+  }
+
+  @media (max-width: 900px) {
+    .commission-story {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .commission-story--reverse .story-images { order: 0; }
+    .commission-story--reverse .story-text { order: 0; }
+    .story-images { height: 320px; }
+    .story-inspiration { width: 68%; }
+    .story-blanket { width: 55%; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <svg width="1cm" height="1cm" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;">
+      <rect x="14" y="14" width="88" height="88" fill="#e8ddd0"/>
+      <rect x="106" y="14" width="88" height="88" fill="#e8ddd0"/>
+      <rect x="198" y="14" width="88" height="88" fill="#191729"/>
+      <rect x="290" y="14" width="88" height="88" fill="#e8ddd0"/>
+      <rect x="14" y="106" width="88" height="88" fill="#191729"/>
+      <rect x="106" y="106" width="88" height="88" fill="#191729"/>
+      <rect x="198" y="106" width="88" height="88" fill="#191729"/>
+      <rect x="290" y="106" width="88" height="88" fill="#e8ddd0"/>
+      <rect x="14" y="198" width="88" height="88" fill="#e8ddd0"/>
+      <rect x="106" y="198" width="88" height="88" fill="#191729"/>
+      <rect x="198" y="198" width="88" height="88" fill="#191729"/>
+      <rect x="290" y="198" width="88" height="88" fill="#191729"/>
+      <rect x="14" y="290" width="88" height="88" fill="#e8ddd0"/>
+      <rect x="106" y="290" width="88" height="88" fill="#191729"/>
+      <rect x="198" y="290" width="88" height="88" fill="#e8ddd0"/>
+      <rect x="290" y="290" width="88" height="88" fill="#e8ddd0"/>
+    </svg>
+    <div>
+      <img src="images/00-tessura.png" alt="Tessura" style="height:36px;width:auto;display:block;margin-bottom:2px;">
+      <span class="nav-subtitle">Atelier · Den Haag</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#philosophy">Philosophy</a></li>
+    <li><a href="#collection">Impressionist</a></li>
+    <li><a href="#companion">Companion</a></li>
+    <li><a href="#commissions-showcase">Stories</a></li>
+    <li><a href="#craft">The Craft</a></li>
+    <li><a href="#commission">Commission</a></li>
+  </ul>
+  <a href="#commission" class="nav-cta">Begin a commission</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">The Hague · Est. 2023 · 32-Shaft Handloom</p>
+    <h1 class="hero-headline">
+      A woven embrace<br>
+      that <em>says it all.</em>
+    </h1>
+    <p class="hero-body">
+      Every piece from Tessura Atelier begins with a thread and ends as something you give to someone you love, or keep close on a difficult day. Handwoven in Den Haag from alpaca, yak, cashmere, and silk. Made to endure.
+    </p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn-primary">Explore the collection</a>
+      <a href="#commission" class="btn-ghost">Commission a piece</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<div class="thread-divider"></div>
+
+<!-- ── PHILOSOPHY ── -->
+<section class="philosophy" id="philosophy">
+  <div class="philosophy-image fade-up">
+    <img src="images/01-tessura-handwoven-textile-close-up.jpeg" alt="Tessura handwoven textile close-up" style="width:100%;height:100%;object-fit:cover;display:block;">
+  </div>
+  <div class="fade-up" style="transition-delay:0.1s;">
+    <p class="section-eyebrow" style="color: var(--amber);">Why we weave</p>
+    <blockquote class="philosophy-quote">
+      I see you.<br>
+      I value you.<br>
+      <em>This was made for you.</em>
+    </blockquote>
+  </div>
+  <div class="fade-up" style="transition-delay: 0.2s;">
+    <div class="philosophy-body">
+      <p>A textile is not merely functional. When you wrap yourself in something handwoven, made thread by thread, decision by decision, you are held by the intention behind it. That is what Tessura is about.</p>
+      <p>We believe objects can carry emotion across time. A blanket gifted at a birth, a throw chosen for a new season, a piece commissioned for a wedding anniversary: these become witnesses to the moments that define us.</p>
+      <p>Every warp is set with purpose. Every weft carries meaning. The loom does not forget.</p>
+    </div>
+    <div class="philosophy-values">
+      <div class="philosophy-value"><div class="value-dot"></div>Rooted in tradition</div>
+      <div class="philosophy-value"><div class="value-dot"></div>Crafted with intention</div>
+      <div class="philosophy-value"><div class="value-dot"></div>Designed to endure</div>
+      <div class="philosophy-value"><div class="value-dot"></div>Made to be given</div>
+    </div>
+  </div>
+</section>
+
+<div class="thread-divider"></div>
+
+<!-- ── COLLECTION ── -->
+<section class="collection" id="collection">
+  <div class="collection-intro fade-up">
+    <div>
+      <p class="section-eyebrow">2026 Collection</p>
+      <h2 class="section-heading">Woven from light,<br><em>kept for life.</em></h2>
+    </div>
+    <p class="collection-description">
+      The 2026 Impressionist collection draws from the light of Monet, the quiet streets of Pissarro, and the riverside afternoons of Sisley, translated into structure drafts for the 32-shaft Louet Megado. Each piece shown is a sample of what we can weave. All designs are available as a wrap, throw, or blanket. Prices start at €480 and vary by size and fibre.
+    </p>
+  </div>
+
+  <div class="collection-grid">
+    <!-- Card 1 -->
+    <div class="product-card fade-up">
+      <div class="product-swatch">
+        <img src="images/02-impression-sunrise-iridescent-blue-and-gold-twill-.jpeg" alt="Impression Sunrise — iridescent blue and gold twill weave" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="product-info">
+        <p class="product-material">Alpaca · Camel</p>
+        <h3 class="product-name">Impression Sunrise</h3>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="product-card fade-up" style="transition-delay:0.1s;">
+      <div class="product-swatch">
+        <img src="images/03-boulevard-montmartre-dark-geometric-pattern-in-bla.jpeg" alt="Boulevard Montmartre — dark geometric pattern in black and chartreuse" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="product-info">
+        <p class="product-material">Cashmere · Alpaca</p>
+        <h3 class="product-name">Boulevard Montmartre</h3>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="product-card fade-up" style="transition-delay:0.2s;">
+      <div class="product-swatch">
+        <img src="images/04-the-seine-at-argenteuil-rose-and-mauve-textured-we.jpeg" alt="The Seine at Argenteuil — rose and mauve textured weave" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="product-info">
+        <p class="product-material">Alpaca · Cashmere</p>
+        <h3 class="product-name">The Seine at Argenteuil</h3>
+      </div>
+    </div>
+
+    <!-- Companion Card 4 — Étretat -->
+    <div class="product-card fade-up" style="transition-delay:0.3s;">
+      <div class="product-swatch">
+        <img src="images/05-tretat-ivory-and-cobalt-stripe-weave.jpeg" alt="Étretat — ivory and cobalt stripe weave" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="product-info">
+        <p class="product-material">Alpaca</p>
+        <h3 class="product-name">Étretat</h3>
+      </div>
+    </div>
+
+    <!-- Impressionist Card 5: Orchard at Éragny -->
+    <div class="product-card fade-up" style="transition-delay:0.4s;">
+      <div class="product-swatch">
+        <img src="images/06-orchard-at-ragny-terracotta-damask-with-olive-and-.jpeg" alt="Orchard at Éragny — terracotta damask with olive and lavender bands" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="product-info">
+        <p class="product-material">Alpaca</p>
+        <h3 class="product-name">Orchard at Éragny</h3>
+      </div>
+    </div>
+  </div>
+  <p class="collection-note fade-up" style="transition-delay:0.3s;">
+    All pieces are woven to order · Lead time 3–4 weeks · <a href="#commission">Begin a commission →</a>
+  </p>
+</section>
+
+<div class="thread-divider"></div>
+
+<!-- ── COMPANION COLLECTION ── -->
+<section class="collection" id="companion">
+  <div class="collection-intro fade-up">
+    <div>
+      <p class="section-eyebrow">The Companion Collection</p>
+      <h2 class="section-heading">Woven for the<br><em>everyday embrace.</em></h2>
+    </div>
+    <p class="collection-description">
+      Quiet, grounded, and full of warmth. The Companion Collection is designed for the pieces that live closest to you: draping a sofa, warming a reading chair, wrapping someone you love on an ordinary Tuesday. Each piece shown is a sample of what we can weave. All designs are available as a wrap, throw, or blanket. Prices start at €480 and vary by size and fibre.
+    </p>
+  </div>
+
+  <div class="collection-grid">
+    <!-- Companion Card 1 -->
+    <div class="product-card fade-up">
+      <div class="product-swatch">
+        <img src="images/07-terracotta-and-ivory-stripe-blanket-with-dark-frin.jpeg" alt="Terracotta and ivory stripe blanket with dark fringe" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="product-info">
+        <p class="product-material">Merino · Alpaca</p>
+        <h3 class="product-name">Quiet Afternoon</h3>
+      </div>
+    </div>
+
+    <!-- Companion Card 2 -->
+    <div class="product-card fade-up" style="transition-delay:0.1s;">
+      <div class="product-swatch">
+        <img src="images/08-sage-green-and-terracotta-windowpane-check-blanket.jpeg" alt="Sage green and terracotta windowpane check blanket" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="product-info">
+        <p class="product-material">Alpaca · Silk</p>
+        <h3 class="product-name">Morning Garden</h3>
+      </div>
+    </div>
+
+    <!-- Companion Card 3 -->
+    <div class="product-card fade-up" style="transition-delay:0.2s;">
+      <div class="product-swatch">
+        <img src="images/09-warm-amber-and-sky-blue-basketweave-blanket.jpeg" alt="Warm amber and sky blue basketweave blanket" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="product-info">
+        <p class="product-material">Merino · Cashmere</p>
+        <h3 class="product-name">Sunday Light</h3>
+      </div>
+    </div>
+
+    <!-- Companion Card 4: The Afternoon Nap -->
+    <div class="product-card fade-up" style="transition-delay:0.3s;">
+      <div class="product-swatch">
+        <img src="images/10-the-afternoon-nap-terracotta-and-olive-with-cobalt.jpeg" alt="The Afternoon Nap — terracotta and olive with cobalt accent" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="product-info">
+        <p class="product-material">Baby Alpaca</p>
+        <h3 class="product-name">The Afternoon Nap</h3>
+      </div>
+    </div>
+
+    <!-- Companion Card 5: Petrichor -->
+    <div class="product-card fade-up" style="transition-delay:0.4s;">
+      <div class="product-swatch">
+        <img src="images/11-petrichor-deep-forest-and-cobalt-with-coral-accent.jpeg" alt="Petrichor — deep forest and cobalt with coral accent" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="product-info">
+        <p class="product-material">Alpaca · Cashmere</p>
+        <h3 class="product-name">Petrichor</h3>
+      </div>
+    </div>
+
+    <!-- Companion Card 6: Silver Morning -->
+    <div class="product-card fade-up" style="transition-delay:0.5s;">
+      <div class="product-swatch">
+        <img src="images/12-silver-morning-warm-grey-and-gold-basketweave.jpeg" alt="Silver Morning — warm grey and gold basketweave" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="product-info">
+        <p class="product-material">Alpaca · Cashmere</p>
+        <h3 class="product-name">Silver Morning</h3>
+      </div>
+    </div>
+  </div>
+  
+
+  <p class="collection-note fade-up" style="transition-delay:0.3s;">
+    All pieces are woven to order · Lead time 3–4 weeks · <a href="#commission">Begin a commission →</a>
+  </p>
+</section>
+
+<div class="thread-divider"></div>
+
+<!-- ── COMMISSIONS SHOWCASE ── -->
+<section class="cs-section" id="commissions-showcase">
+
+  <div class="cs-intro fade-up">
+    <p class="section-eyebrow" style="display:flex;justify-content:center;">Stories in thread</p>
+    <h2 class="section-heading" style="text-align:center;">Every commission<br>begins with a <em>moment.</em></h2>
+    <p class="cs-intro-body">These are pieces we have woven for people who wanted to give something no shop could offer. Each one began with a story. Each one ended as something that will last a lifetime.</p>
+  </div>
+
+  <!-- ── Story 1: Housewarming ── -->
+  <div class="cs-story fade-up">
+    <div class="cs-images">
+      <div class="cs-img cs-img--back">
+        <img src="images/13-housewarming-throw-woven-from-the-building-facade.jpeg" alt="Housewarming throw woven from the building facade">
+        <span class="cs-label">The piece</span>
+      </div>
+      <div class="cs-img cs-img--front">
+        <img src="images/14-the-building-that-inspired-the-throw.jpeg" alt="The building that inspired the throw">
+        <span class="cs-label cs-label--overlay">The inspiration</span>
+      </div>
+    </div>
+    <div class="cs-text">
+      <p class="cs-tag">Housewarming gift</p>
+      <h3 class="cs-title">The building, woven.</h3>
+      <p class="cs-body">They had just moved into their new home. Instead of flowers or wine, a friend commissioned a throw woven from a photograph of the building itself. The façade's grid of windows and warm timber panels became the threading draft. The colours came from the stone, the glass, the light on that particular afternoon. It hangs on their sofa now, and guests always ask.</p>
+    </div>
+  </div>
+
+  <div class="cs-divider"></div>
+
+  <!-- ── Story 2: Engagement ── -->
+  <div class="cs-story cs-story--flip fade-up">
+    <div class="cs-images cs-images--engagement">
+      <div class="cs-img cs-img--back">
+        <img src="images/15-engagement-blanket-in-the-couple-s-favourite-colou.jpeg" alt="Engagement blanket in the couple's favourite colours">
+        <span class="cs-label" style="display:block;text-align:right;">The piece</span>
+      </div>
+      <div class="cs-img cs-img--front cs-img--corner">
+        <img src="images/16-the-couple-at-the-moment-of-their-engagement.jpeg" alt="The couple at the moment of their engagement">
+        <span class="cs-label">The moment</span>
+      </div>
+    </div>
+    <div class="cs-text">
+      <p class="cs-tag">Engagement gift</p>
+      <h3 class="cs-title">In their colours, always.</h3>
+      <p class="cs-body">He asked. She said yes. A close friend wanted to mark the moment with something that would outlast the champagne and the flowers. She sent us a photograph from that afternoon and told us their favourite colours. We translated both into an arabesque structure in periwinkle and warm gold. A blanket for the life they are building together.</p>
+    </div>
+  </div>
+
+  <div class="cs-divider"></div>
+
+  <!-- ── Story 3: Iris ── -->
+  <div class="cs-story fade-up">
+    <div class="cs-images cs-images--iris">
+      <div class="cs-img cs-img--back" style="position:absolute;top:0;left:0;width:70%;z-index:1;">
+        <div style="position:relative;display:inline-block;width:100%;">
+          <img src="images/17-violeta-s-nursery-room.jpeg" alt="Violeta's nursery room" style="object-fit:contain;background:#f5efe6;aspect-ratio:unset;height:280px;">
+          <span class="cs-label" style="position:absolute;bottom:-1.4rem;left:1.5rem;">Her room</span>
+        </div>
+      </div>
+      <div class="cs-img cs-img--front">
+        <img src="images/18-baby-blankets-woven-to-match-iris-s-nursery.jpeg" alt="Baby blankets woven to match Iris's nursery">
+        <span class="cs-label">The pieces</span>
+      </div>
+    </div>
+    <div class="cs-text">
+      <p class="cs-tag">New arrival · Set of two</p>
+      <h3 class="cs-title">Welcome, Violeta.</h3>
+      <p class="cs-body">Her parents had prepared the room with such care: a world of colour waiting for her to arrive. Her grandparents commissioned two baby blankets to match. We wove them from the palette of that room, so that from her very first days, Violeta would be wrapped in the same colours as the love around her.</p>
+    </div>
+  </div>
+
+  <div class="cs-divider"></div>
+
+  <!-- ── Story 4: The Weather Placemats ── -->
+  <div class="cs-story fade-up">
+    <div class="cs-images">
+      <div class="cs-img cs-img--back">
+        <img src="images/19-two-woven-placemats-one-showing-rain-one-showing-s.jpeg" alt="Two woven placemats — one showing rain, one showing sun" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <span class="cs-label">The pieces</span>
+      </div>
+    </div>
+    <div class="cs-text">
+      <p class="cs-tag">A grandmother's gift</p>
+      <h3 class="cs-title">Rain or shine, set the table.</h3>
+      <p class="cs-body">A grandmother wanted her grandchild to be able to look at the table and know what kind of day it was outside. Two placemats: one woven with a rain-washed forest, pale trees and silver lines falling through ivory linen. The other with a wide golden sun, a blue mountain, and autumn leaves scattered across the cloth. Each morning, the right one goes on the table. A small ritual. A woven weather report.</p>
+    </div>
+  </div>
+  <div class="cs-divider"></div>
+
+  <!-- ── Story 5: The Lap Throw ── -->
+  <div class="cs-story cs-story--flip fade-up" style="padding-bottom:3rem;">
+    <div class="cs-images">
+      <div class="cs-img cs-img--back">
+        <img src="images/20-navy-and-terracotta-lap-throw-draped-over-a-rockin.jpeg" alt="Navy and terracotta lap throw draped over a rocking chair" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <span class="cs-label">The piece</span>
+      </div>
+    </div>
+    <div class="cs-text">
+      <p class="cs-tag">Bespoke commission</p>
+      <h3 class="cs-title">Made to belong.</h3>
+      <p class="cs-body">The brief was simple: something that would feel at home. The client had a white rocking chair, a cushion in soft florals of navy, terracotta and periwinkle, and a room that already knew its own character. We wove a lap throw, as part of a collection, that spoke the same language: deep indigo, warm terracotta and dusty blue in a dense geometric structure, with a twisted fringe that picks up every colour at once. It was made for that chair. It will stay there.</p>
+    </div>
+  </div>
+  <div class="cs-cta fade-up">
+    <p class="cs-cta-text">Your story is waiting to be woven.</p>
+    <a href="#commission" class="btn-primary" style="display:inline-block;">Begin a commission</a>
+  </div>
+
+</section>
+
+<div class="thread-divider"></div>
+
+<!-- ── CRAFT ── -->
+<section class="craft" id="craft">
+  <div class="craft-loom-visual fade-up" aria-hidden="true">
+    <!-- Animated loom threading diagram -->
+    <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <!-- Shaft lines -->
+      <line x1="40" y1="60" x2="320" y2="60" stroke="#e8ddd0" stroke-width="0.5" opacity="0.2"/>
+      <line x1="40" y1="100" x2="320" y2="100" stroke="#e8ddd0" stroke-width="0.5" opacity="0.2"/>
+      <line x1="40" y1="140" x2="320" y2="140" stroke="#e8ddd0" stroke-width="0.5" opacity="0.2"/>
+      <line x1="40" y1="180" x2="320" y2="180" stroke="#e8ddd0" stroke-width="0.5" opacity="0.2"/>
+      <!-- Warp threads -->
+      <line x1="80" y1="40" x2="80" y2="320" stroke="#a27021" stroke-width="0.75" opacity="0.5"/>
+      <line x1="120" y1="40" x2="120" y2="320" stroke="#a27021" stroke-width="0.75" opacity="0.5"/>
+      <line x1="160" y1="40" x2="160" y2="320" stroke="#bb521f" stroke-width="0.75" opacity="0.5"/>
+      <line x1="200" y1="40" x2="200" y2="320" stroke="#a27021" stroke-width="0.75" opacity="0.5"/>
+      <line x1="240" y1="40" x2="240" y2="320" stroke="#6e6331" stroke-width="0.75" opacity="0.5"/>
+      <line x1="280" y1="40" x2="280" y2="320" stroke="#a27021" stroke-width="0.75" opacity="0.5"/>
+      <!-- Threading dots -->
+      <circle cx="80" cy="60" r="5" fill="#bb521f"/>
+      <circle cx="120" cy="100" r="5" fill="#bb521f"/>
+      <circle cx="160" cy="140" r="5" fill="#a27021"/>
+      <circle cx="200" cy="180" r="5" fill="#a27021"/>
+      <circle cx="240" cy="100" r="5" fill="#6e6331"/>
+      <circle cx="280" cy="60" r="5" fill="#6e6331"/>
+      <!-- Treadle tie-up grid -->
+      <rect x="60" y="230" width="240" height="80" fill="none" stroke="#e8ddd0" stroke-width="0.3" opacity="0.15"/>
+      <rect x="60" y="230" width="40" height="40" fill="#e8ddd0" opacity="0.15"/>
+      <rect x="140" y="230" width="40" height="40" fill="#e8ddd0" opacity="0.15"/>
+      <rect x="220" y="230" width="40" height="40" fill="#e8ddd0" opacity="0.15"/>
+      <rect x="100" y="270" width="40" height="40" fill="#e8ddd0" opacity="0.15"/>
+      <rect x="180" y="270" width="40" height="40" fill="#e8ddd0" opacity="0.15"/>
+      <rect x="260" y="270" width="40" height="40" fill="#e8ddd0" opacity="0.15"/>
+      <!-- Label -->
+      <text x="180" y="340" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" fill="#e8ddd0" opacity="0.3" letter-spacing="3">LOUET MEGADO · 32 SHAFTS</text>
+    </svg>
+  </div>
+
+  <div class="craft-steps">
+    <div class="fade-up">
+      <p class="section-eyebrow">The making</p>
+      <h2 class="section-heading">Every thread<br>is a <em>decision.</em></h2>
+    </div>
+
+    <div class="craft-step fade-up" style="transition-delay:0.1s;">
+      <span class="step-number">01</span>
+      <div>
+        <p class="step-label">Design</p>
+        <p class="step-text">Each piece begins as a structure draft: a threading sequence for 32 shafts that determines how light will move through the cloth.</p>
+      </div>
+    </div>
+
+    <div class="craft-step fade-up" style="transition-delay:0.15s;">
+      <span class="step-number">02</span>
+      <div>
+        <p class="step-label">Warp</p>
+        <p class="step-text">Premium fibres, including alpaca from Peru, yak from Mongolia, cashmere from the highlands, and silk, are measured and dressed onto the loom by hand.</p>
+      </div>
+    </div>
+
+    <div class="craft-step fade-up" style="transition-delay:0.2s;">
+      <span class="step-number">03</span>
+      <div>
+        <p class="step-label">Weave</p>
+        <p class="step-text">Each row is woven individually on the Louet Megado. A single blanket takes between 12 and 40 hours of active weaving, depending on the complexity of the structure and the fineness of the fibre.</p>
+      </div>
+    </div>
+
+    <div class="craft-step fade-up" style="transition-delay:0.25s;">
+      <span class="step-number">04</span>
+      <div>
+        <p class="step-label">Finish</p>
+        <p class="step-text">Hems are hand-stitched. Each piece is washed, blocked, and inspected before being wrapped and numbered.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="thread-divider"></div>
+
+<!-- ── COMMISSION ── -->
+<section class="commission" id="commission">
+  <div class="commission-context fade-up">
+    <p class="section-eyebrow">Bespoke weaving</p>
+    <h2 class="section-heading">Something<br>made only<br>for <em>them.</em></h2>
+    <p>A commissioned piece from Tessura is a deeply personal object. It can mark a birth, a marriage, a goodbye, a thank you: any moment that deserves to be remembered in textile form.</p>
+    <p>We work with you to translate your intention into a threading draft: choosing the fibre, the weight, the structure, the palette. The result is a piece that could not exist for anyone else.</p>
+
+    <div class="commission-details">
+      <div class="detail-item">
+        <span class="detail-label">Lead time</span>
+        <span>3–4 weeks from confirmation</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Fibres</span>
+        <span>Alpaca, yak, cashmere, silk, fine merino, and blends</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Formats</span>
+        <span>If it can be woven, we can make it for you</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Standard sizes</span>
+        <span>Wrap · approx. 55 × 180 cm<br>Throw · approx. 130 × 150 cm<br>Blanket · approx. 130 × 200 cm</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Starting from</span>
+        <span>€480 depending on size and fibre</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="commission-form-wrap fade-up" style="transition-delay:0.15s;">
+    <p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--olive);margin-bottom:1.75rem;">Begin a commission</p>
+    <form id="commission-form" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="f-name">Name</label>
+          <input class="form-input" type="text" id="f-name" name="name" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="f-email">Email</label>
+          <input class="form-input" type="email" id="f-email" name="email" required placeholder="your@email.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="f-occasion">Occasion</label>
+        <select class="form-select" id="f-occasion" name="occasion">
+          <option value="" disabled selected>Select one</option>
+          <option>Wedding or partnership</option>
+          <option>New birth</option>
+          <option>Anniversary or milestone</option>
+          <option>Bereavement or memorial</option>
+          <option>New home</option>
+          <option>Gratitude or appreciation</option>
+          <option>Personal piece</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="f-piece">Type of piece</label>
+        <select class="form-select" id="f-piece" name="piece_type">
+          <option value="" disabled selected>Select one</option>
+          <option>Blanket (standard 130×180 cm)</option>
+          <option>Throw (90×140 cm)</option>
+          <option>Wall piece</option>
+          <option>Shawl</option>
+          <option>Wrap</option>
+          <option>I'm not sure yet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="f-message">Tell me about this piece</label>
+        <textarea class="form-textarea" id="f-message" name="message" placeholder="Who is it for? What should it feel like? Any colours, textures, or moments you want it to hold?"></textarea>
+      </div>
+      <button type="submit" class="btn-submit" id="submit-btn">Send my enquiry</button>
+      <p id="form-success" style="display:none;margin-top:1rem;font-size:0.8rem;color:var(--olive);letter-spacing:0.08em;">Thank you — I'll be in touch within two working days at info@tessuraatelier.com.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand fade-up">
+      <span class="nav-wordmark">Tessura Atelier</span>
+      <span class="nav-subtitle">Den Haag · Netherlands · KVK 98634674</span>
+      <p>Handwoven luxury textiles made with intention in The Hague. Each piece is a vessel for the moments that matter.</p>
+    </div>
+    <div class="footer-col fade-up" style="transition-delay:0.05s;">
+      <p class="footer-col-title">Studio</p>
+      <ul>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#craft">The craft</a></li>
+        <li><a href="#commission">Commissions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col fade-up" style="transition-delay:0.1s;">
+      <p class="footer-col-title">Collection</p>
+      <ul>
+        <li><a href="#collection">2026 Impressionist</a></li>
+        <li><a href="#companion">The Companion Collection</a></li>
+        <li><a href="#commissions-showcase">Stories in Thread</a></li>
+        <li><a href="#commission">Bespoke pieces</a></li>
+      </ul>
+    </div>
+    <div class="footer-col fade-up" style="transition-delay:0.15s;">
+      <p class="footer-col-title">Contact</p>
+      <ul>
+        <li><a href="mailto:info@tessuraatelier.com">info@tessuraatelier.com</a></li>
+        <li><a href="https://instagram.com/tessuraatelier" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2023 Tessura Atelier · Den Haag · tessuraatelier.com</span>
+    <span><a href="#" onclick="document.getElementById('privacy-modal').style.display='flex';return false;">Privacy</a> · <a href="#" onclick="document.getElementById('care-modal').style.display='flex';return false;">Care guide</a></span>
+  </div>
+</footer>
+
+<script>
+  /* Nav scroll */
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  /* Mobile menu */
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('open');
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => links.classList.remove('open'));
+  });
+
+  /* Fade-up intersection observer */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  /* Form */
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    setTimeout(() => {
+      document.getElementById('commission-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }, 900);
+  }
+</script>
+
+
+<!-- ── PRIVACY POLICY MODAL ── -->
+<div id="privacy-modal" style="display:none;position:fixed;inset:0;z-index:200;align-items:center;justify-content:center;background:rgba(25,23,41,0.7);padding:2rem;overflow-y:auto;" onclick="if(event.target===this)this.style.display='none';">
+  <div style="background:var(--ivory);max-width:560px;width:100%;padding:3rem 3rem 2.5rem;position:relative;margin:auto;">
+    <button onclick="document.getElementById('privacy-modal').style.display='none'" style="position:absolute;top:1.25rem;right:1.25rem;background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--indigo);opacity:0.5;" aria-label="Close">✕</button>
+    <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--olive);margin-bottom:1rem;">Tessura Atelier</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:300;color:var(--indigo);margin-bottom:0.5rem;line-height:1.2;">Privacy Policy</h2>
+    <p style="font-size:0.75rem;color:var(--text-muted-light);margin-bottom:1.75rem;">Last updated: July 2026</p>
+
+    <p style="font-size:0.9rem;line-height:1.85;color:var(--text-muted-light);margin-bottom:1.5rem;">Tessura Atelier, registered in The Netherlands (KVK 98634674), is committed to protecting your privacy. This policy explains what personal data we collect, how we use it, and your rights under the General Data Protection Regulation (GDPR).</p>
+
+    <div style="border-top:0.5px solid var(--ivory-dark);margin:1.25rem 0;"></div>
+
+    <p style="font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--pastel);margin-bottom:0.75rem;">What data we collect</p>
+    <p style="font-size:0.9rem;line-height:1.85;color:var(--text-muted-light);margin-bottom:1.5rem;">When you submit a commission enquiry through this website, we collect your name, email address, and the details you share in the enquiry form. We do not use cookies, analytics tools, advertising trackers, or any third-party data services. No data is collected simply by visiting this site.</p>
+
+    <div style="border-top:0.5px solid var(--ivory-dark);margin:1.25rem 0;"></div>
+
+    <p style="font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--pastel);margin-bottom:0.75rem;">How we use it</p>
+    <p style="font-size:0.9rem;line-height:1.85;color:var(--text-muted-light);margin-bottom:1.5rem;">Your data is used solely to respond to your enquiry and, if you proceed, to complete your commission. We do not use your information for marketing, we do not share it with third parties, and we do not sell it under any circumstances.</p>
+
+    <div style="border-top:0.5px solid var(--ivory-dark);margin:1.25rem 0;"></div>
+
+    <p style="font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--pastel);margin-bottom:0.75rem;">How long we keep it</p>
+    <p style="font-size:0.9rem;line-height:1.85;color:var(--text-muted-light);margin-bottom:1.5rem;">We retain your data only for as long as is necessary to fulfil your commission and meet any legal obligations under Dutch law. Once this purpose is met, your data is deleted.</p>
+
+    <div style="border-top:0.5px solid var(--ivory-dark);margin:1.25rem 0;"></div>
+
+    <p style="font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--pastel);margin-bottom:0.75rem;">Your rights</p>
+    <p style="font-size:0.9rem;line-height:1.85;color:var(--text-muted-light);margin-bottom:1.5rem;">Under the GDPR you have the right to access the personal data we hold about you, to correct any inaccuracies, and to request its deletion at any time. You also have the right to object to how we process your data. To exercise any of these rights, please contact us at the address below. We will respond within 30 days.</p>
+
+    <div style="border-top:0.5px solid var(--ivory-dark);margin:1.25rem 0;"></div>
+
+    <p style="font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--pastel);margin-bottom:0.75rem;">Contact</p>
+    <p style="font-size:0.9rem;line-height:1.85;color:var(--text-muted-light);">Tessura Atelier · Den Haag, Netherlands<br>
+    KVK 98634674<br>
+    <a href="mailto:info@tessuraatelier.com" style="color:var(--olive);">info@tessuraatelier.com</a><br><br>
+    If you feel your rights have not been respected, you have the right to lodge a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens) at <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener" style="color:var(--olive);">autoriteitpersoonsgegevens.nl</a>.</p>
+  </div>
+</div>
+
+<!-- ── CARE GUIDE MODAL ── -->
+<div id="care-modal" style="display:none;position:fixed;inset:0;z-index:200;align-items:center;justify-content:center;background:rgba(25,23,41,0.7);padding:2rem;" onclick="if(event.target===this)this.style.display='none';">
+  <div style="background:var(--ivory);max-width:560px;width:100%;padding:3rem 3rem 2.5rem;position:relative;">
+    <button onclick="document.getElementById('care-modal').style.display='none'" style="position:absolute;top:1.25rem;right:1.25rem;background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--indigo);opacity:0.5;" aria-label="Close">✕</button>
+    <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--olive);margin-bottom:1rem;">Tessura Atelier</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:300;color:var(--indigo);margin-bottom:1.75rem;line-height:1.2;">Caring for your piece</h2>
+
+    <p style="font-size:0.9rem;line-height:1.85;color:var(--text-muted-light);margin-bottom:1.25rem;">Every Tessura piece is handwoven on a 32-shaft loom using fine natural fibres — alpaca, yak, cashmere, silk, and merino. Because each piece is made by hand, small variations in texture, weave density, and fringe are a natural part of the cloth. They are not flaws; they are evidence of its making.</p>
+
+    <p style="font-size:0.9rem;line-height:1.85;color:var(--text-muted-light);margin-bottom:1.25rem;">New pieces may shed a little lint during the first few uses. This is completely normal with fine natural fibres and will diminish noticeably after three or four washes.</p>
+
+    <div style="border-top:0.5px solid var(--ivory-dark);margin:1.5rem 0;"></div>
+
+    <p style="font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--pastel);margin-bottom:0.75rem;">Washing</p>
+    <p style="font-size:0.9rem;line-height:1.85;color:var(--text-muted-light);margin-bottom:1.25rem;">Hand wash only in cold water with a gentle wool detergent. Do not wring, bleach, or tumble dry. Support the full weight of the piece when lifting it wet.</p>
+
+    <p style="font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--pastel);margin-bottom:0.75rem;">Drying</p>
+    <p style="font-size:0.9rem;line-height:1.85;color:var(--text-muted-light);margin-bottom:1.25rem;">Lay flat or line dry away from direct sunlight and heat. Reshape gently while still damp.</p>
+
+    <p style="font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--pastel);margin-bottom:0.75rem;">Storage</p>
+    <p style="font-size:0.9rem;line-height:1.85;color:var(--text-muted-light);">Fold and store in a breathable cloth bag. Keep away from direct sunlight over long periods to preserve colour. A cedar block nearby will protect natural fibres from moths.</p>
+  </div>
+</div>
+</body>
+</html>
